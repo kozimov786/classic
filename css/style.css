@@ -239,3 +239,56 @@ body{
     border: none;
     z-index: 99;
 }
+/* MAIN */
+.site-main{
+    padding-top: 140px;
+}
+.dishes-info__container{
+    position: relative;
+}
+.dishes-info-title{
+    margin: 0;
+    margin-bottom: 49px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+}
+.dishes-list{
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+     margin-left: 200px;
+     display: flex;
+     align-items: center;
+     margin-bottom: 50px;
+}
+.dishes-item{
+    padding: 16px 35px;
+    background-color: #ECEEF6;
+    border-radius: 45px;
+}
+.dishes-btn{
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+}
+
+.dishes-item:not(:last-child){
+    margin-right: 30px;
+}
+.store-icon{
+    position: absolute;
+    top: -130px;
+    right:0;
+    object-fit: contain;
+}
+.dishes-item__active{
+    background-color: #59AAF1;
+ }
+ .dishes-item__active .dishes-btn{
+     color: #fff;
+ }
