@@ -68,6 +68,7 @@ body{
     line-height: 1.5;
     background-color: #fff;
     color: var(--main-color);
+    overflow-x: hidden;
 }
 .container{
     max-width: 1360px;
@@ -247,6 +248,33 @@ body{
     font-size: 48px;
     line-height: 59px;
     text-align: center;
+    position: relative;
+}
+.dishes-info-title::after{
+    content: "";
+    width: 198px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    top: 250px;
+    right: -200px;
+    background-image: url("../img/main-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.dishes-info-title::before{
+    content: "";
+    width: 198px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -200px;
+    background-image: url("../img/main-ng-img-3.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 .dishes-list{
      margin: 0;
@@ -399,8 +427,23 @@ body{
 
  .load-box{
      text-align: center;
+     
  }
+ .load-more-btn::before{
+    content: "";
+    width: 198px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left:-730px;
+    background-image: url("../img/main-bg-image-2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
  .load-more-btn{
+    position: relative;
      padding: 28px;
      border: none;
      background:url("../img/load-more.png") no-repeat center center,
