@@ -298,7 +298,7 @@ body{
  }
  .card{
      max-width: 260px;
-     padding: 25px;
+     padding: 25px 15px 25px;
      background-color: #fff;
      background-image: url(../img/card.png);
      background-repeat: no-repeat;
@@ -382,10 +382,13 @@ body{
  .card-hit::after{
      content:"Хіт";
      position: absolute;
+     font-weight: 600;
+     font-size: 12px;
+     line-height: 140%;
      top: 15px;
      left: 15px;
      color: white;
-     padding: 2px 20px;
+     padding: 4px 22px;
      text-align: left;
      width:60px;
      height: 25px;
