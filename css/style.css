@@ -301,12 +301,13 @@ body{
  }
  .card{
      max-width: 260px;
-     padding: 25px 15px;
+     padding: 25px;
      background-color: #fff;
      background-image: url(../img/card.png);
      background-repeat: no-repeat;
-     background-size:260px 425px, contain;
+     background-size:260px 415px, contain;
      margin-bottom: 10px;
+     position: relative;
  }
  .card:not(:nth-child(4n)){
      margin-right: 38px;
@@ -323,21 +324,23 @@ body{
     margin-right: auto;
     line-height: 140%;
  }
- .card-title::before{
+ .card::before{
      content: "";
      width: 170px;
      height: 173px;
      display: block;
+     margin-left: auto;
+     margin-right: auto;
      background-position: center center;
      background-repeat: no-repeat;
-     background-size: contain;
-     background-image: url(../img/korbonara.jpg);
+     background-size:contain;
+     background-image: url(../img/celmon.png);
+     margin-bottom: 30px;
  }
  .card-measure{
     font-weight: normal;
     font-size: 12px;
     line-height: 140%;
-    margin-top: 160px;
  }
  .card-text{
      margin: 0;
@@ -350,20 +353,46 @@ body{
     font-weight: 300;
     font-size: 24px;
     line-height: 140%;
+    display: block;
     text-align: center;
+    margin-bottom: 18px;
     color: var(--price-color);
  }
- .card-price::after{
-     content: "";
+ .store-box{
+     text-align: center;
+ }
+ .store-btn{
+     border: none;
+     padding: 10px;
+     margin-left: auto;
+     margin-right: auto;
      width: 33px;
-     display: block;
      height: 33px;
-     margin-top: 19px;
      background-color: #fff;
-     border: 1px solid var(--border-color);
-     border-radius: 59px;
      background-image: url(../img/store-default.png);
      background-repeat: no-repeat;
-     background-position: 55% 40%;
-     background-size:12px 12px,contain;
+     background-position: center center;
+     border: 1px solid var(--border-color);
+     border-radius: 59px;
+      text-align: center;
+ }
+ .active-store__btn{
+     background: url("../img/store-accent.png") no-repeat 55% 45%,
+                 linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+     box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+     border-radius: 59px;
+ }
+ .card-hit::after{
+     content:"Хіт";
+     position: absolute;
+     top: 15px;
+     left: 15px;
+     color: white;
+     padding: 2px 20px;
+     text-align: left;
+     width:60px;
+     height: 25px;
+     background: linear-gradient(116.88deg, #FE3326 -4.28%, #F26E0E 112.69%), #59AAF1;
+     box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+     border-radius: 3px;
  }
