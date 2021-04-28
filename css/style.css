@@ -108,6 +108,13 @@ body{
     text-decoration: none;
     color: var(--main-color);
 }
+.sitenav-item:hover{
+    box-shadow: 0 2px 0 0 var(--secondary-price-color);
+}
+.sitenav-item:hover .sitenav-link{
+    color: var(--secondary-price-color);
+
+}
 .sitenav-item:not(:last-child){
     margin-right: 40px;
 }
@@ -115,6 +122,7 @@ body{
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
+    transition: ease-in-out 0.4s;
 }
 
 
@@ -157,7 +165,12 @@ body{
     font-size: 18px;
     line-height: 22px;
     display: flex;
+    transition:ease-in-out 0.4s ;
     align-items: center;
+}
+.phone-link:hover::before{
+    background:url(../img/phone.png) no-repeat center center,
+               linear-gradient(287.74deg, #FE5626 8.52%, #F58656 92.72%);
 }
 
 /* LOGO */
@@ -233,6 +246,12 @@ body{
     border-radius: 59px;
     border: none;
     z-index: 99;
+    transition: ease-in-out 0.4s;
+}
+.plus-btn:hover{
+    transform:scale(1.1) rotate(180deg);
+    cursor: pointer;
+    box-shadow: none;
 }
 /* MAIN */
 .site-main{
@@ -334,6 +353,15 @@ body{
      position: relative;
      z-index: 4;
  }
+ .card-pizza{
+     display: block;
+     margin-left:22px;
+     margin-bottom: 30px;
+     transition: ease-in-out 0.4s;
+ }
+ .card-pizza:hover{
+     transform: translateY(10px);
+ }
  .card::after{
     position: absolute;
     background-color: #FFF;
@@ -364,19 +392,7 @@ body{
     margin-right: auto;
     line-height: 140%;
  }
- .card::before{
-     content: "";
-     width: 170px;
-     height: 173px;
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     background-position: center center;
-     background-repeat: no-repeat;
-     background-size:contain;
-     background-image: url(../img/celmon.png);
-     margin-bottom: 30px;
- }
+ 
  .card-measure{
     font-weight: normal;
     font-size: 12px;
@@ -411,17 +427,21 @@ body{
      background-color: #fff;
      background-image: url(../img/store-default.png);
      background-repeat: no-repeat;
-     background-position: center center;
+     background-position: 55% 45%;
+     background-size:12px 14px, contain;
      border: 1px solid var(--border-color);
      border-radius: 59px;
-      text-align: center;
+     cursor: pointer;
+      transition: ease-in-out 0.4s;
  }
- .active-store__btn{
+ .store-btn:hover{
+     transform: scale(1.1);
      background: url("../img/store-accent.png") no-repeat 55% 45%,
-                 linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
-     box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
-     border-radius: 59px;
+     linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+    box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+    border-radius: 59px;
  }
+ 
  .card-hit::after{
      content:"Хіт";
      position: absolute;
@@ -441,6 +461,7 @@ body{
  }
 .load-more-img{
     display: block;
+    transition: ease-in-out 0.4s;
 }
  .load-more__btn{
      padding: 18px;
@@ -450,6 +471,13 @@ body{
      background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
      box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
      border-radius: 59px;
+     transition: ease-in-out 0.4s;
  }
-
+ .load-more__btn:hover{
+     transform: scale(1.1);
+     background: linear-gradient(287.74deg, #FE5626 8.52%, #F58656 92.72%);
+ }
+ .load-more__btn:hover .load-more-img{
+     transform: rotate(180deg);
+ }
  
