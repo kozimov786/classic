@@ -326,14 +326,29 @@ body{
  }
  .card{
      max-width: 260px;
-     padding: 25px 15px 25px;
+     padding: 25px 15px 0 25px;
      background-color: #fff;
-     background-image: url(../img/card.png);
-     background-repeat: no-repeat;
-     background-size:260px 415px, contain;
-     margin-bottom: 10px;
+     border: 2px solid var(--border-color);
+     border-radius: 15px;
+     margin-bottom: 30px;
      position: relative;
+     z-index: 4;
  }
+ .card::after{
+    position: absolute;
+    background-color: #FFF;
+    width: 50px;
+    height: 50px;
+    content: "";
+    margin-bottom: 10px;
+    border-radius: 0 0 25px 0 ;
+    border-right: 2px solid #eceef7;
+    border-bottom: 2px solid #eceef7;
+    transform: rotate(45deg);
+    bottom: -37px;
+    left: 103px;
+    z-index: -4;
+}
  .card:not(:nth-child(4n)){
      margin-right: 38px;
  }
@@ -384,7 +399,7 @@ body{
     color: var(--price-color);
  }
  .store-box{
-     text-align: center;
+     margin-left: 87px;
  }
  .store-btn{
      border: none;
