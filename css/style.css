@@ -93,7 +93,7 @@ body{
     background-image: url(../img/vegitable.png),
                        url(../img/icons.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: -50px center,50px 30px;
 }
 .site-header__container{
     display: flex;
