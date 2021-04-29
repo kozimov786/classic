@@ -280,7 +280,7 @@ body{
     padding-top: 140px;
     background-image: url("../img/main-bg.png");
     background-repeat: no-repeat;
-    background-position: center 15%;
+    background-position: calc(50% + 10px) 140px;
 }
 .dishes-info__container{
     position: relative;
@@ -544,17 +544,17 @@ body{
     z-index: 2;
     background-image:url("../img/bg-vegitable.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: calc(50% + -140px) 60%;
 }
 .form-section__container{
-    max-width: 1360px;
+    max-width: 1460px;
     padding: 0;
     padding-top: 82px;
     padding-bottom: 300px;
     background-image:url("../img/icon.png");
     background-repeat: no-repeat;
     background-size:contain;
-    background-position: center center;
+    background-position:calc(50% + -50px) 90%;
     text-align: center;
 }
 .form-car{
