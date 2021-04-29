@@ -117,6 +117,7 @@ body{
 .sitenav-link{
     text-decoration: none;
     color: var(--main-color);
+    transition: ease-in-out 0.4s;
 }
 .sitenav-item:hover{
     box-shadow: 0 2px 0 0 var(--secondary-price-color);
@@ -175,14 +176,25 @@ body{
     font-size: 18px;
     line-height: 22px;
     display: flex;
-    transition:ease-in-out 0.4s ;
     align-items: center;
 }
-.phone-link:hover::before{
-    background:url(../img/phone.png) no-repeat center center,
-               linear-gradient(287.74deg, #FE5626 8.52%, #F58656 92.72%);
+.phone-link:hover{
+    background-image: linear-gradient(287.74deg, #FE5626 8.52%, #F58656  92.72%);
+    color: #fff;
+    border-radius: 15px;
 }
 
+.phone-link:hover::before{
+    transform: scale(1.2);
+    transition: ease-out 0.4s;
+}
+.phone-link:active::before{
+    transform: translateX(155px) scale(1.2);
+    transition: ease-out 0.4s;
+}
+.phone-link:active{
+    color: transparent;
+}
 /* LOGO */
 .logo-link{
     margin-right: 149px;
@@ -349,6 +361,7 @@ body{
  .card-pizza:hover{
      transform: translateY(10px);
  }
+ 
  .card::after{
     position: absolute;
     background-color: #FFF;
@@ -486,7 +499,10 @@ body{
     box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
     background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
     border-radius: 15px;
+    transition: ease-in-out 0.4s;
+    position: relative;
 }
+
 .instagram__text{
     font-weight: normal;
     font-size: 24px;
@@ -496,6 +512,7 @@ body{
     box-shadow:0 0 2px 0 #fff;
     padding: 55px;
     border-radius: 15px;
+    text-align: left;
 }
 .instagram__link{
     text-decoration: none;
@@ -504,7 +521,21 @@ body{
     font-size: 24px;
     line-height: 29px;
     text-align: center;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 42%;
+    bottom: 0;
+    left: 14%;
+    right: 0;
+    
 }
+.instagram__container:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    background: linear-gradient(45.04deg, #F65B16 -51.05%, #FD9924 134.89%);
+}
+
 
 /* FORM_SECTION */
 .form-section{
@@ -553,6 +584,10 @@ body{
     font-size: 14px;
     line-height: 140%;
     color: #222222;
+    outline: none;
+}
+.form-order input:focus{
+    box-shadow:inset 0 0 0 2px #FE5626;
 }
 .form-btn{
     border: none;
@@ -578,16 +613,27 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../img/arrow.png");
+    transition: ease-out 0.4s;
+}
+.form-btn:hover::after{
+    transform: translateX(10px);
 }
 /* FOOTER */
 
 .site-footer{
     background-color: #fff;
     padding: 33px 0;
+    position: relative;
 }
 .site-footer__container{
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
 }
 .footer-copy{
     font-weight: normal;
