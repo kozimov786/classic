@@ -77,6 +77,16 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 /* SITE_HEADER */
 .site-header-wrapper{
     background-color: var(--header-bg-color);
@@ -84,11 +94,11 @@ body{
                        url(../img/icons.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size:100% auto, contain;
 }
 .site-header__container{
     display: flex;
     align-items: center;
+
 }
 .site-header{
     padding-top:25px;
@@ -256,6 +266,9 @@ body{
 /* MAIN */
 .site-main{
     padding-top: 140px;
+    background-image: url("../img/main-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 15%;
 }
 .dishes-info__container{
     position: relative;
@@ -268,32 +281,6 @@ body{
     line-height: 59px;
     text-align: center;
     position: relative;
-}
-.dishes-info-title::after{
-    content: "";
-    width: 198px;
-    height: 150px;
-    display: block;
-    position: absolute;
-    top: 250px;
-    right: -200px;
-    background-image: url("../img/main-bg-img.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-}
-.dishes-info-title::before{
-    content: "";
-    width: 198px;
-    height: 150px;
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: -200px;
-    background-image: url("../img/main-ng-img-3.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
 }
 .dishes-list{
      margin: 0;
@@ -481,3 +468,153 @@ body{
      transform: rotate(180deg);
  }
  
+ /* INSTAGRA_SECTION */
+
+.instagram-section{
+    padding: 40px 0;
+    background-repeat:repeat-x;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("../img/korusel.png");
+    margin-bottom: 127px;
+}
+.instagram__container{
+    width: 480px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
+    border-radius: 15px;
+}
+.instagram__text{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    box-shadow:0 0 2px 0 #fff;
+    padding: 55px;
+    border-radius: 15px;
+}
+.instagram__link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+/* FORM_SECTION */
+.form-section{
+    background-color: var(--header-bg-color);
+    position: relative;
+    z-index: 2;
+    background-image:url("../img/bg-vegitable.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.form-section__container{
+    max-width: 1360px;
+    padding: 0;
+    padding-top: 82px;
+    padding-bottom: 300px;
+    background-image:url("../img/icon.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center center;
+    text-align: center;
+}
+.form-car{
+    position: absolute;
+    bottom:-18%;
+    object-fit: contain;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -2;
+}
+.form-section__title{
+    width: 600px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 150%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.form-order input{
+    width: 260px;
+    padding: 20px 30px;
+    background: #FFFFFF;
+    margin-right: 40px;
+    border: 2px solid #ECEEF7;
+    border-radius: 57px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #222222;
+}
+.form-btn{
+    border: none;
+    position: relative;
+    margin: 0;
+    color: #fff;
+    padding: 18px 116px 18px 30px;
+    background: linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+    box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+    border-radius: 59px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+}
+.form-btn::after{
+    content: "";
+    width: 32px;
+    display: block;
+    height: 9px;
+    position: absolute;
+    top: 23px;
+    right: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/arrow.png");
+}
+/* FOOTER */
+
+.site-footer{
+    background-color: #fff;
+    padding: 33px 0;
+}
+.site-footer__container{
+    display: flex;
+    align-items: center;
+}
+.footer-copy{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    margin-right: auto;
+}
+.made-from{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    margin-left: auto;
+    position: relative;
+}
+.made-from b{
+    font-weight: bold;
+}
+.made-from::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: -5px;
+    width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 59px;
+    background-color: #FE5626;
+}
