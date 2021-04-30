@@ -171,6 +171,7 @@ body{
     margin-right: 16px;
 }
 .phone-link{
+    white-space: nowrap;
     text-decoration: none;
     color: var(--main-color);
     font-weight: bold;
