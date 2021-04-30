@@ -117,6 +117,7 @@ body{
 .sitenav-link{
     text-decoration: none;
     color: var(--main-color);
+    white-space: nowrap;
     transition: ease-in-out 0.4s;
 }
 .sitenav-item:hover{
