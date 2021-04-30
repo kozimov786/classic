@@ -145,6 +145,7 @@ body{
 .daily-work{
     margin: 0;
     padding: 0;
+    white-space: nowrap;
     line-height: 20px;
     display: flex;
     margin-right: 40px;
@@ -261,7 +262,7 @@ body{
 .plus-btn{
     position: absolute;
     top: 310px;
-    right: 480px;
+    right: 420px;
     width: 33px;
     height: 33px;
     background: url(../img/plus.png) no-repeat center center,
